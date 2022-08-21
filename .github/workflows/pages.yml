@@ -37,6 +37,9 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      - name: Init
+        run: |
+          git config --global --add safe.directory /github/workspace
       - name: Deply
         uses: ad-m/github-push-action@v0.5.0
         with:
