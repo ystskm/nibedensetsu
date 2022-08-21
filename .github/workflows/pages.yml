@@ -35,11 +35,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
-          path: '.'
-      - name: Init
-        run: |
-          git config --global --add safe.directory /github/workspace
+          path: 'docs'
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v1
